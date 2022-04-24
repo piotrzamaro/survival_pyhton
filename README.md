@@ -25,4 +25,13 @@ Wynikiem zastosowanej funkcji jest dwukolumnowy zestaw danych zawierających zmi
 
 # **analiza_RMST**
 
+Funkcja służąca do oszacowania wartości RMST na podstawie zrekonstruowanych danych IPD. 
+Wartość obszaru pod przebiegiem krzywej Kaplana-Meiera reprezentowana jest wartością RMST, która mierzy ograniczony średni czas przeżycia od początku obserwacji do określonego punktu definiowanego jako czas obcięcia (ang. truncation time, tau). Obszar powyżej krzywej Kaplana-Meiera reprezentuje ograniczony średni czas utracony (RMTL). RMST (restricted mean survival time) można interpretować jako średni czas przeżycia wolny od zdarzeń do określonego punktu czasowego, tau. W odróżnieniu od mediany, przedstawiającej 50% przeżycia w danym punkcie czasowym, RMST przedstawia czas przeżycia do danego punktu czasowego.
+
+Dane wejściowe obejmują zrekonstruowane dane IPD, tj. dwukolumnowy zestaw danych zawierających zmienne: **time** (czas zdarzenia) oraz **status** (status zdarzenia). 
+
+Wynikiem zastosowanej funkcji są oszacowane wartości RMST w dwóch horyzontach:
+
+* horyzont roczny, tj. punkt odcięcia równy 12 miesiącom 
+* horyzont badania, tj. punkt odcięcia równy maksymalnemu wspólnemu przebiegowi dwóch ramion badania
 
